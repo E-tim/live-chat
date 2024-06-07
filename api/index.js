@@ -4,6 +4,9 @@ const socketIo = require('socket.io');
 const cors = require('cors');
 
 const app = express();
+app.get('/', (req, res)=> {
+    res.send('Hello World')
+})
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
